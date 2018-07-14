@@ -13,17 +13,12 @@ Things you may want to cover:
 
 * Database creation
 
-##usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|null: false, unique: true|
-|name|string|index:true, null: false, unique: true|
-|mail|string|null: false,unique: true|
+## usersテーブル
 
 ### Association
 - has_many :messages
 - has_many :groups
+- has_many :members
 
 ## membersテーブル
 
@@ -36,7 +31,7 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
-##groupsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -46,13 +41,14 @@ Things you may want to cover:
 ### Association
 - has_many :messages
 - has_many :users
+- has_many :members
 
-##messagesテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, unique: true|
-|text|string|null: false|
+|text|string||
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: faise, foreign_key: true|
