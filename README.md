@@ -1,24 +1,11 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
 * Database creation
 
 ## usersテーブル
 
 ### Association
-- has_many :messages
-- has_many :groups
 - has_many :members
+- has_many :groups, through: :members
+- has_many :messages
 
 ## membersテーブル
 
@@ -35,19 +22,17 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, unique: true|
 |name|string|index:true, null: false, unique: true|
 
 ### Association
-- has_many :messages
-- has_many :users
 - has_many :members
+- has_many :users, through: :members
+- has_many :messages
 
 ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, unique: true|
 |text|string||
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
