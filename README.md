@@ -1,5 +1,3 @@
-* Database creation
-
 ## usersテーブル
 
 ### Association
