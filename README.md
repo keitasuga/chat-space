@@ -11,8 +11,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -35,20 +35,9 @@
 |------|----|-------|
 |text|string||
 |image|string||
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: faise, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: faise, foreign_key: true|
 
 ### Association
 - belongs_to :user
 - belongs_to :group
-
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
