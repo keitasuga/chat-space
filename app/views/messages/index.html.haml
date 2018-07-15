@@ -8,15 +8,32 @@
       .sidebar
         .header
           %h3{class: "header__name"}
+          karimen
           %ul{class: "header__lists"}
+            %li{class: "list"}
         .groups
           .group
+            %a{href: root_path }
+              .group__name
+              aaa
+              .group__message
+              こんにちはこんにちは
       .chat
         .header
           .left-header
             .left-header__title
             %ul{class: "left-header__members"}
+              %li{class: "member"}
           .right-header
             .right-header__members
+              %a{href: "right-header__button"}
         .messagers
+          .upper-message
+            .upper-message__user-name
+            karimen
+            .upper-message__date
+            2018.7.16
+          .lower-message
+            .lower-message__content
+            今日も愉快だな
         .form
