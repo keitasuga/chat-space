@@ -72,16 +72,44 @@ a {
     background-color: #AAAAAA;
     width: calc(100vw - 300px);
     height: 100%;
-    padding: 0 40px;
+    padding: 0;
     box-sizing: border-box;
     float: right;
     .header {
       height: 100px;
       background-color: white;
-      .left-header__title {
-        color: #333333;
-        font-size: 20px;
-        padding-top: 35px;
+      border-bottom: 2px solid #eeeeee;
+      padding: 0 40px;
+      .left-header {
+        float: left;
+        height: 35px;
+        .left-header__title {
+          color: #333333;
+          font-size: 20px;
+          margin-top: 35px;
+          height: 20px;
+          float: left;
+        }
+        .left-header__members {
+          font-size: 12px;
+          color: #999999;
+          list-style: none;
+          .member {
+            float: left;
+            padding-top: 15px;
+          }
+        }
+      }
+      .right-header {
+        margin-top: 28px;
+        line-height: 40px;
+        padding: 0 20px;
+        float: right;
+        border: 1px solid #38AEF0;
+        .a.right-header__button {
+          color: #38AEF0;
+        }
+
       }
     }
   }
