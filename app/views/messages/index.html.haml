@@ -1,15 +1,22 @@
-%head
 
-%body
-  .notification
-  .wrapper
-    .sidebar
-      .header
-        %h3{class: "header__name"}
-        %ul{class: "header__lists"}
-      .groups
-        .group
-    .chat
-      .header
-      .messagers
-      .form
+%html
+  %head
+
+  %body
+    .notification
+    .wrapper
+      .sidebar
+        .header
+          %h3{class: "header__name"}
+          %ul{class: "header__lists"}
+        .groups
+          .group
+      .chat
+        .header
+          .left-header
+            .left-header__title
+            %ul{class: "left-header__members"}
+          .right-header
+            .right-header__members
+        .messagers
+        .form

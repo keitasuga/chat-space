@@ -3,5 +3,25 @@
 .notification {
   background-color: #38AEF0;
   height: 24px;
-  width: auto;
+  width: 100vw;
+}
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  .sidebar {
+    background-color: #2f3e51;
+    width: 260px;
+    padding: 0 20px;
+    height: 100%;
+    float: left;
+  }
+  .chat {
+    background-color: #AAAAAA;
+    width: calc(100vw - 380px);
+    height: 100%;
+    padding: 0 40px;
+    float: right;
+
+  }
 }
