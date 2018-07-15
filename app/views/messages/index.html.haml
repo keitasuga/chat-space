@@ -7,23 +7,30 @@
     .wrapper
       .sidebar
         .header
-          %h3{class: "header__name"}
-          karimen
+          %h3{class: "header__name"} karimen
           %ul{class: "header__lists"}
             %li{class: "list"}
+              %a{href: root_path } #{fa_icon "cog"}
+            %li{class: "list"}
+              %a{href: root_path } #{fa_icon "edit"}
         .groups
           .group
             %a{href: root_path }
-              .group__name
-              aaa
-              .group__message
-              こんにちはこんにちは
+              .group__name aaa
+              .group__message こんにちはこんにちは
+          .group
+            %a{href: root_path }
+              .group__name bbb
+              .group__message おはようおはよう
       .chat
         .header
           .left-header
-            .left-header__title
+            .left-header__title まるまるグループ
             %ul{class: "left-header__members"}
-              %li{class: "member"}
+              %li{class: "member"} karimen,
+              %li{class: "member"} karimen,
+              %li{class: "member"} karimen,
+              %li{class: "member"} karimen
           .right-header
             .right-header__members
               %a{href: "right-header__button"}
