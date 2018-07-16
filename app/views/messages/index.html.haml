@@ -32,14 +32,23 @@
               %li{class: "member"} karimen,
               %li{class: "member"} karimen
           .right-header
-            %a{href: "right-header__button"} edit
+            %a{class: "right-header__button", href: root_path } Edit
         .messagers
           .upper-message
-            .upper-message__user-name
-            karimen
-            .upper-message__date
-            2018.7.16
+            .upper-message__user-name karimen
+            .upper-message__date 2018.7.16
           .lower-message
-            .lower-message__content
-            今日も愉快だな
+            .lower-message__content こんにちはテストテスト
+          .upper-message
+            .upper-message__user-name karimen
+            .upper-message__date 2018.7.17
+          .lower-message
+            .lower-message__content こんばんはテストテスト
         .form
+          %form{:action => "/", :method => "post"}
+            %textarea{:class => "form__message", :name => "text", :placeholder => "type a message"}
+            .form__image
+              %label.upload-label{for: "upload-icon"}
+                %i.fa.fa-picture-o
+                %file_field{:name => "image", :id => "upload-icon"}
+            %input{:class => "form__button", :type => "submit", :value => "Send"}
