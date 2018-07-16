@@ -1,0 +1,130 @@
+
+  .chat {
+    background-color: #AAAAAA;
+    width: calc(100vw - 300px);
+    height: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    float: right;
+    .header {
+      height: 100px;
+      background-color: white;
+      border-bottom: 2px solid #eeeeee;
+      padding: 0 40px;
+      .left-header {
+        float: left;
+        height: 35px;
+        .left-header__title {
+          color: #333333;
+          font-size: 20px;
+          margin-top: 35px;
+          height: 20px;
+          float: left;
+        }
+        .left-header__members {
+          font-size: 12px;
+          color: #999999;
+          list-style: none;
+          .member {
+            float: left;
+            padding-top: 15px;
+          }
+        }
+      }
+      .right-header {
+        margin-top: 28px;
+        line-height: 40px;
+        padding: 0 20px;
+        float: right;
+        border: 1px solid $blueColor;
+        .right-header__button {
+          color: $blueColor;
+        }
+      }
+    }
+    .messagers {
+      padding: 46px 40px 0;
+      .upper-message {
+        display: flex;
+        flex-direction: row;
+        .upper-message__user-name {
+          font-size: 16px;
+          font-weight: bold;
+          color: #434A54;
+        }
+        .upper-message__date {
+          padding-left: 10px;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      .lower-message {
+        padding: 10px 0 40px;
+        .lower-message__content {
+          font-size: 14px;
+          color: #434A54;
+        }
+      }
+    }
+    .form {
+      width: calc(100vw - 300px);
+      padding: 20px 40px;
+      position: fixed;
+      bottom: 0;
+      background-color: #999999;
+      box-sizing: border-box;
+      .form__message {
+        font-size: 16px;
+        line-height: 50px;
+        height: 50px;
+        width: calc(100% - 150px);
+        padding: 0 10px;
+        background-color: white;
+        box-sizing: border-box;
+        float: left;
+      }
+      .form__message:focus {
+        box-shadow:0px 0px 5px 3px rgba(0, 0, 0, 0.2), 0px 0px 5px 3px rgba(0, 0, 0, 0.2) inset;
+        border: 2px solid #38AFE0;
+      }
+      .form__image {
+        display: inline-block;
+        height: 50px;
+        width: 30px;
+        background-color: white;
+        margin: 0;
+        float: left;
+        box-sizing: border-box;
+        position: relative;
+        .fa.fa-picture-o {
+          font-size: 20px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto 0 ;
+          line-height: 50px;
+          vertical-align: bottom;
+        }
+        .form__filesend {
+          line-height: 50px;
+          position: absolute;
+          left: -25px;
+          right: 0;
+          bottom: 0;
+          top: 0;
+          opacity: 0;
+        }
+      }
+      .form__button {
+        height: 50px;
+        width: 100px;
+        background-color: $blueColor;
+        color: $whiteColor;
+        margin-left: 15px;
+        box-sizing: border-box;
+        float: right;
+      }
+    }
+  }

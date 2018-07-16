@@ -3,7 +3,7 @@
   %head
 
   %body
-    .notification
+    .notification チャットグループが作成されました。
     .wrapper
       .sidebar
         .header
@@ -51,6 +51,6 @@
               %label.upload-label{for: "upload-icon"}
                 %i.fa.fa-picture-o
                 %file_field{:name => "image", :id => "upload-icon"}
-                %input{:class => "filesend",:type => "file", :name => "datafile", :multiple_accept => ".jpg,.gif,.png,image/gif,image/jpeg,image/png"}
+                %input{:class => "form__filesend",:type => "file", :name => "datafile", :multiple_accept => ".jpg,.gif,.png,image/gif,image/jpeg,image/png"}
 
             %input{:class => "form__button", :type => "submit", :value => "Send"}
