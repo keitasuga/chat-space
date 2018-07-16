@@ -13,15 +13,7 @@
               %a{href: root_path } #{fa_icon "cog"}
             %li{class: "list"}
               %a{href: root_path } #{fa_icon "edit"}
-        .groups
-          .group
-            %a{href: root_path }
-              .group__name aaa
-              .group__message こんにちはこんにちは
-          .group
-            %a{href: root_path }
-              .group__name bbb
-              .group__message おはようおはよう
+        = render 'messages/group'
       .chat
         .header
           .left-header
