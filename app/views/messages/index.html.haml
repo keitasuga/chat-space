@@ -25,12 +25,12 @@
           Edit
     = render 'messages/message'
     .form
-      %form{:action => "/", :method => "post"}
-        %textarea{:class => "form__message", :name => "text", :placeholder => "type a message"}
+      %form{action: "/", method: "post"}
+        %textarea{class: "form__message", name: "text", placeholder: "type a message"}
         .form__image
           %label.upload-label{for: "upload-icon"}
             %i.fa.fa-picture-o
-            %file_field{:name => "image", :id => "upload-icon"}
-            %input{:class => "form__filesend",:type => "file", :name => "datafile", :multiple_accept => ".jpg,.gif,.png,image/gif,image/jpeg,image/png"}
+            %file_field{name: "image", id: "upload-icon"}
+            %input{class: "form__filesend",type: "file", name: "datafile", multiple_accept: ".jpg,.gif,.png,image/gif,image/jpeg,image/png"}
 
-        %input{:class => "form__button", :type => "submit", :value => "Send"}
+        %input{class: "form__button", type: "submit", value: "Send"}

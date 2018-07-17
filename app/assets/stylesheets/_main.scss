@@ -9,13 +9,13 @@
     .header {
       height: 100px;
       background-color: white;
-      border-bottom: 2px solid #eeeeee;
+      border-bottom: 2px solid $borderlineColor;
       padding: 0 40px;
       .left-header {
         float: left;
         height: 35px;
         .left-header__title {
-          color: #333333;
+          color: $maingrouptextColor;
           font-size: 20px;
           margin-top: 35px;
           height: 20px;
@@ -23,7 +23,7 @@
         }
         .left-header__members {
           font-size: 12px;
-          color: #999999;
+          color: $lightgrayColor;
           list-style: none;
           .member {
             float: left;
@@ -50,19 +50,19 @@
         .upper-message__user-name {
           font-size: 16px;
           font-weight: bold;
-          color: #434A54;
+          color: $messagetextColor;
         }
         .upper-message__date {
           padding-left: 10px;
           font-size: 12px;
-          color: #999999;
+          color: $lightgrayColor;
         }
       }
       .lower-message {
         padding: 10px 0 40px;
         .lower-message__content {
           font-size: 14px;
-          color: #434A54;
+          color: $messagetextColor;
         }
       }
     }
@@ -71,7 +71,7 @@
       padding: 20px 40px;
       position: fixed;
       bottom: 0;
-      background-color: #999999;
+      background-color: $lightgrayColor;
       box-sizing: border-box;
       .form__message {
         font-size: 16px;
