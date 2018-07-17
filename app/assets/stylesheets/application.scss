@@ -2,23 +2,8 @@
 @import "font-awesome";
 @import "./form_reset";
 @import "./variables";
+@import "./link";
+@import "./notification";
+@import "./wrapper";
 @import "./leftside";
 @import "./rightside";
-
-a {
-  color: $whiteColor;
-  text-decoration: none;
-}
-
-.notification {
-  background-color: $blueColor;
-  height: 24px;
-  width: 100vw;
-  text-align: center;
-  color: $whiteColor;
-}
-
-.wrapper{
-  height: 100vh;
-  width: 100vw;
-}
