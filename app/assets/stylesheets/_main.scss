@@ -96,6 +96,11 @@
         float: left;
         box-sizing: border-box;
         position: relative;
+        .upload-label {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+        }
         .fa.fa-picture-o {
           font-size: 20px;
           position: absolute;
@@ -105,9 +110,8 @@
           left: 0;
           margin: auto 0 ;
           line-height: 50px;
-          vertical-align: bottom;
         }
-        .form__filesend {
+        #upload-icon {
           line-height: 50px;
           position: absolute;
           left: 0;
@@ -116,7 +120,7 @@
           top: 0;
           opacity: 0;
           max-width: 20px;
-          font-size: none;
+          display: none;
         }
       }
       &__button {
