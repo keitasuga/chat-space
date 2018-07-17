@@ -5,10 +5,10 @@
       %h3.header__name karimen
       %ul.header__lists
         %li.list
-          = link_to root_path do
+          = link_to "#" do
             = fa_icon "cog"
         %li.list
-          = link_to root_path do
+          = link_to "#" do
             = fa_icon "edit"
     = render 'messages/group'
   .chat
@@ -21,7 +21,7 @@
           %li.member karimen,
           %li.member karimen
       .right-header
-        = link_to root_path, class: "right-header__button" do
+        = link_to "#", class: "right-header__button" do
           Edit
     = render 'messages/message'
     .form
