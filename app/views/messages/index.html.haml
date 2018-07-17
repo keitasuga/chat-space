@@ -1,0 +1,35 @@
+.notification チャットグループが作成されました。
+.wrapper
+  .sidebar
+    .header
+      %h3.header__name karimen
+      %ul.header__lists
+        %li.list
+          = link_to "#" do
+            = fa_icon "cog"
+        %li.list
+          = link_to "#" do
+            = fa_icon "edit"
+    = render 'messages/group'
+  .chat
+    .header
+      .left-header
+        .left-header__title まるまるグループ
+        %ul.left-header__members
+          %li.member karimen,
+          %li.member karimen,
+          %li.member karimen,
+          %li.member karimen
+      .right-header
+        = link_to "#", class: "right-header__button" do
+          Edit
+    = render 'messages/message'
+    .form
+      %form{action: "/", method: "post"}
+        %textarea{class: "form__message", name: "text", placeholder: "type a message"}
+        .form__image
+          %label.upload-label{for: "upload-icon"}
+            %i.fa.fa-picture-o
+            %input{id: "upload-icon",type: "file", name: "datafile", multiple_accept: ".jpg,.gif,.png,image/gif,image/jpeg,image/png"}
+
+        %input{class: "form__button", type: "submit", value: "Send"}

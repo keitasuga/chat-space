@@ -1,0 +1,50 @@
+.sidebar {
+  background-color: $bluegrayColor;
+  width: 300px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  .header {
+    background-color: $lightbluegrayColor;
+    height: 100px;
+    width: 300px;
+    padding: 35px 20px 0;
+    float: left;
+    box-sizing: border-box;
+    &__name {
+      color: $whiteColor;
+      font-size: 16px;
+      font-weight: bold;
+      float: left;
+    }
+    &__lists {
+      color: $whiteColor;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      .list {
+        float: right;
+        margin: 0;
+        letter-spacing: 5px;
+      }
+    }
+  }
+  .groups {
+    .group {
+      width: 300px;
+      padding: 20px 20px 40px;
+      height: 91px;
+      float: left;
+      box-sizing: border-box;
+        &__name {
+          font-size: 15px;
+          padding-bottom: 5px;
+        }
+        &__message {
+          font-size: 11px;
+        }
+    }
+  }
+}
