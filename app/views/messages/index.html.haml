@@ -1,48 +1,36 @@
+.notification チャットグループが作成されました。
+.wrapper
+  .sidebar
+    .header
+      %h3.header__name karimen
+      %ul.header__lists
+        %li.list
+          = link_to root_path do
+            = fa_icon "cog"
+        %li.list
+          = link_to root_path do
+            = fa_icon "edit"
+    = render 'messages/group'
+  .chat
+    .header
+      .left-header
+        .left-header__title まるまるグループ
+        %ul.left-header__members
+          %li.member karimen,
+          %li.member karimen,
+          %li.member karimen,
+          %li.member karimen
+      .right-header
+        = link_to root_path, class: "right-header__button" do
+          Edit
+    = render 'messages/message'
+    .form
+      %form{:action => "/", :method => "post"}
+        %textarea{:class => "form__message", :name => "text", :placeholder => "type a message"}
+        .form__image
+          %label.upload-label{for: "upload-icon"}
+            %i.fa.fa-picture-o
+            %file_field{:name => "image", :id => "upload-icon"}
+            %input{:class => "form__filesend",:type => "file", :name => "datafile", :multiple_accept => ".jpg,.gif,.png,image/gif,image/jpeg,image/png"}
 
-%html
-  %head
-
-  %body
-    .notification チャットグループが作成されました。
-    .wrapper
-      .sidebar
-        .header
-          %h3{class: "header__name"} karimen
-          %ul{class: "header__lists"}
-            %li{class: "list"}
-              %a{href: root_path } #{fa_icon "cog"}
-            %li{class: "list"}
-              %a{href: root_path } #{fa_icon "edit"}
-        = render 'messages/group'
-      .chat
-        .header
-          .left-header
-            .left-header__title まるまるグループ
-            %ul{class: "left-header__members"}
-              %li{class: "member"} karimen,
-              %li{class: "member"} karimen,
-              %li{class: "member"} karimen,
-              %li{class: "member"} karimen
-          .right-header
-            %a{class: "right-header__button", href: root_path } Edit
-        .messagers
-          .upper-message
-            .upper-message__user-name karimen
-            .upper-message__date 2018.7.16
-          .lower-message
-            .lower-message__content こんにちはテストテスト
-          .upper-message
-            .upper-message__user-name karimen
-            .upper-message__date 2018.7.17
-          .lower-message
-            .lower-message__content こんばんはテストテスト
-        .form
-          %form{:action => "/", :method => "post"}
-            %textarea{:class => "form__message", :name => "text", :placeholder => "type a message"}
-            .form__image
-              %label.upload-label{for: "upload-icon"}
-                %i.fa.fa-picture-o
-                %file_field{:name => "image", :id => "upload-icon"}
-                %input{:class => "form__filesend",:type => "file", :name => "datafile", :multiple_accept => ".jpg,.gif,.png,image/gif,image/jpeg,image/png"}
-
-            %input{:class => "form__button", :type => "submit", :value => "Send"}
+        %input{:class => "form__button", :type => "submit", :value => "Send"}
