@@ -1,16 +1,5 @@
-.notification チャットグループが作成されました。
 .wrapper
-  .sidebar
-    .header
-      %h3.header__name karimen
-      %ul.header__lists
-        %li.list
-          = link_to "#" do
-            = fa_icon "cog"
-        %li.list
-          = link_to "#" do
-            = fa_icon "edit"
-    = render 'messages/group'
+  = render 'sidebar'
   .chat
     .header
       .left-header
