@@ -87,7 +87,7 @@
         box-shadow:0px 0px 5px 3px rgba(0, 0, 0, 0.2), 0px 0px 5px 3px rgba(0, 0, 0, 0.2) inset;
         border: 2px solid #38AFE0;
       }
-      &__image {
+      &__mask {
         display: inline-block;
         height: 50px;
         width: 30px;
@@ -96,34 +96,34 @@
         float: left;
         box-sizing: border-box;
         position: relative;
-        .upload-label {
+        &__image {
           display: inline-block;
           width: 20px;
           height: 20px;
-        }
-        .fa.fa-picture-o {
-          font-size: 20px;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          margin: auto 0 ;
-          line-height: 50px;
-        }
-        #upload-icon {
-          line-height: 50px;
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          top: 0;
-          opacity: 0;
-          max-width: 20px;
-          display: none;
+          .icon {
+            font-size: 20px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto 0 ;
+            line-height: 50px;
+          }
+          .hidden {
+            line-height: 50px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            opacity: 0;
+            max-width: 20px;
+            display: none;
+          }
         }
       }
-      &__button {
+      &__submit {
         height: 50px;
         width: 100px;
         background-color: $blueColor;
