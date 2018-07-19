@@ -3,22 +3,20 @@
   .chat
     .header
       .left-header
-        .left-header__title まるまるグループ
+        .left-header__title
+          = @group.name
         %ul.left-header__members
-          %li.member karimen,
-          %li.member karimen,
-          %li.member karimen,
-          %li.member karimen
+          = render "member"
       .right-header
         = link_to "#", class: "right-header__button" do
           Edit
-    = render 'messages/message'
+    .messagers
+      = render @messages
     .form
-      %form{action: "/", method: "post"}
-        %textarea{class: "form__message", name: "text", placeholder: "type a message"}
-        .form__image
-          %label.upload-label{for: "upload-icon"}
-            %i.fa.fa-picture-o
-            %input{id: "upload-icon",type: "file", name: "datafile", multiple_accept: ".jpg,.gif,.png,image/gif,image/jpeg,image/png"}
-
-        %input{class: "form__button", type: "submit", value: "Send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :text, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
