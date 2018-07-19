@@ -4,11 +4,11 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(message_params)
+    # @message = Message.new(message_params)
   end
 
-  private
-    def message_params
-      params.require(:message).permit(:text, :image)
-    end
+  # private
+  #   def message_params
+  #     params.require(:message).permit(:text, :image)
+  #   end
 end
