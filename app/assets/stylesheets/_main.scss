@@ -64,6 +64,10 @@
           font-size: 14px;
           color: $messagetextColor;
         }
+        &__image {
+          max-width: 200px;
+          max-height: 80px;
+        }
       }
     }
     .form {
