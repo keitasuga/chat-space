@@ -8,7 +8,7 @@
         %ul.left-header__members
           = render "member"
       .right-header
-        = link_to "#", class: "right-header__button" do
+        = link_to edit_group_path(params[:group_id]), class: "right-header__button" do
           Edit
     .messagers
       = render @messages
