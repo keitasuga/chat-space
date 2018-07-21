@@ -3,7 +3,7 @@
     .upper-message__user-name
       = message.user.name
     .upper-message__date
-      = message.created_at
+      = l message.created_at, format: :long
   .lower-message
     - if message.text.present?
       %p.lower-message__content

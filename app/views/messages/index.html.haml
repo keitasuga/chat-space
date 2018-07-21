@@ -10,7 +10,7 @@
       .right-header
         = link_to edit_group_path(params[:group_id]), class: "right-header__button" do
           Edit
-    .messagers
+    .messages
       = render @messages
     .form
       = form_for [@group, @message] do |f|
