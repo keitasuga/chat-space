@@ -31,7 +31,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('.messages').animate({scrollTop:$('#scroll').offset().top});
+      $('.messages').animate({scrollTop:$('.messages')[0].scrollHeight});
       $('#new_message')[0].reset();
       $(".form__submit").prop("disabled", false);
     })
