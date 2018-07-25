@@ -10,7 +10,8 @@ $(function(){
                     </div>
                   </div>
                   <div class="lower-message">
-                    ${message.text? `<p class="lower-message__content"> ${message.text} </p>` : "" }
+                    <p class="lower-message__content"> ${message.text}
+                    </p>
                     ${message.image? `<img src=${message.image} class='lower-message__image'>` : "" }
                   </div>
                 </div>`
@@ -19,19 +20,25 @@ $(function(){
   $("#new_message").submit(function(e){
     e.preventDefault();
     var formData = new FormData(this);
-    var href = location.href
+    var url = $(this).attr('action')
+
     $.ajax({
-      url: href,
+      url: url,
       type: "POST",
       data: formData,
       dataType: 'json',
       processData: false,
       contentType: false
     })
+
     .done(function(data){
+      var messages = $('.messages')
+      var scroll = function() {
+        messages.animate({scrollTop:messages[0].scrollHeight});
+      }
       var html = buildHTML(data);
-      $('.messages').append(html);
-      $('.messages').animate({scrollTop:$('.messages')[0].scrollHeight});
+      messages.append(html);
+      scroll();
       $('#new_message')[0].reset();
       $(".form__submit").prop("disabled", false);
     })
