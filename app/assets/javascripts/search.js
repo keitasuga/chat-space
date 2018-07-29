@@ -1,7 +1,6 @@
 $(document).on('turbolinks:load', function() {
 
   $('.chat-group-form').on('click', '.user-search-add', function () {
-    console.log(this)
     var userId = $(this).attr("data-user-id")
     var userName = $(this).attr("data-user-name")
     $(this).parent(".chat-group-user").empty();
@@ -31,7 +30,6 @@ $(document).on('turbolinks:load', function() {
                 <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
               </div>`
     $("#chat-group-users").append(html);
-    console.log()
   }
 
   $('#user-search-field').on('keyup', function() {
@@ -59,7 +57,6 @@ $(document).on('turbolinks:load', function() {
     })
   });
   $('#user-search-result').on('click', '.user-search-add', function () {
-    console.log(this)
     var userId = $(this).attr("data-user-id")
     var userName = $(this).attr("data-user-name")
     $(this).parent(".chat-group-user").empty();
