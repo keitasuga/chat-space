@@ -1,12 +1,4 @@
 $(document).on('turbolinks:load', function() {
-
-  $('.chat-group-form').on('click', '.user-search-add', function () {
-    var userId = $(this).attr("data-user-id")
-    var userName = $(this).attr("data-user-name")
-    $(this).parent(".chat-group-user").empty();
-    addToGroup(userId, userName);
-  });
-
   function appendUser(user){
     var html =`<div class="chat-group-user clearfix">
                 <p class="chat-group-user__name">${user.name}</p>
